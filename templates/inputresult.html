@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Input Status</title>
+
+  <!-- Bootstrap Core CSS -->
+  <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom Fonts -->
+  <link href="static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+  <link href="static/vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link href="static/css/stylish-portfolio.min.css" rel="stylesheet">
+
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <a class="menu-toggle rounded" href="#">
+        <i class="fas fa-bars"></i>
+      </a>
+      <nav id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+          <li class="sidebar-nav-item">
+            <a class="js-scroll-trigger" href="http://127.0.0.1:5001/">Home</a>
+          </li>
+          <li class="sidebar-nav-item">
+              <a class="js-scroll-trigger" href="http://127.0.0.1:5001/predictform">Predict</a>
+          </li>
+          <li class="sidebar-nav-item">
+              <a class="js-scroll-trigger" href="http://127.0.0.1:5001/inputform">Input Data</a>
+          </li>
+        </ul>
+      </nav>
+
+    <!-- Header -->
+    <header class="masthead d-flex">
+        <h3 class="mb-1">Input Successful!</h3>
+
+      <div class="container text-center my-auto">
+          <form class="mb-1" 
+        action="http://127.0.0.1:5001/"
+        method="POST">
+            <!-- row 1 -->
+            <div class="row">
+                <!-- nr.employed -->
+                <div class="col s6">
+                        <h5>Number of employees: {{prediction['nr_employed']}}</h5>
+                </div>
+    
+                <!-- pdays -->
+                <div class="col s6">
+                        <h5>Days after last contact: {{prediction['pdays']}}</h5>
+                </div>
+            </div>    
+            
+            <!-- row 2 -->
+            <div class="row">
+                <!-- cons.conf.idx -->
+                <div class="col s6">
+                        <h5>Consumer confidence index: {{prediction['cons_conf_idx']}}</h5>
+                </div>
+    
+                <!-- euribor3m -->
+                <div class="col s6">
+                        <h5>Euribor 3 month: {{prediction['euribor3m']}}</h5>
+                </div>
+            </div>    
+
+            <!-- row 3 -->
+            <div class="row">
+                <!-- cons.price.idx -->
+                <div class="col s6">
+                        <h5>Consumer price index: {{prediction['cons_price_idx']}}</h5>
+                </div>
+    
+                <!-- emp.var.rate -->
+                <div class="col s6">
+                        <h5>Employment variation rate: {{prediction['emp_var_rate']}}</h5>
+                </div>
+            </div>    
+
+            <!-- row 4 -->
+            <div class="row">
+                <!-- previous -->
+                <div class="col s6">
+                        <h5>Contacts before current campaign: {{prediction['previous']}}</h5>
+                </div>
+    
+                <!-- age -->
+                <div class="col s6">
+                        <h5>Age: {{prediction['age']}}</h5>
+                </div>
+            </div>    
+
+            <!-- row 5 -->
+            <div class="row">
+                <!-- campaign -->
+                <div class="col s6">
+                        <h5>Contacts during current campaign: {{prediction['campaign']}}</h5>
+                </div>
+
+                <!-- education -->
+                <div class="col s6">
+                    <h5>Education: {{prediction['education']}}</h5>
+                </div>
+
+                <!-- y -->
+                <div class="col s6">
+                        <h5>Subscribed: {{prediction['y']}}</h5>
+                </div>
+            </div>    
+    
+                
+            <!-- row 3 -->
+            <div class="mb-1">
+                <button class='btn waves-effect waves-light' type="submit">
+                    Back to Home
+                    &nbsp;&nbsp;
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+    
+        </form>
+
+          
+        </div>
+        <div class="overlay"></div>
+      </header>
+
+      
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="static/vendor/jquery/jquery.min.js"></script>
+  <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="static/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="static/js/stylish-portfolio.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Prediction Form</title>
+
+  <!-- Bootstrap Core CSS -->
+  <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom Fonts -->
+  <link href="static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+  <link href="static/vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link href="static/css/stylish-portfolio.min.css" rel="stylesheet">
+
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <a class="menu-toggle rounded" href="#">
+      <i class="fas fa-bars"></i>
+    </a>
+    <nav id="sidebar-wrapper">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-item">
+          <a class="js-scroll-trigger" href="http://127.0.0.1:5001/">Home</a>
+        </li>
+        <li class="sidebar-nav-item">
+            <a class="js-scroll-trigger" href="http://127.0.0.1:5001/predictform">Predict</a>
+        </li>
+        <li class="sidebar-nav-item">
+            <a class="js-scroll-trigger" href="http://127.0.0.1:5001/inputform">Input Data</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Header -->
+    <header class="masthead d-flex">
+      <div class="container text-center my-auto">
+
+          <form class="mb-1" 
+        action="http://127.0.0.1:5001/predictform"
+        method="POST">
+            <!-- row 1 -->
+            <div class="row">
+                <!-- nr.employed -->
+                <div class="input-field col s6">
+                    <input class='validate' id='nr.employed' name="nr.employed" type="number">
+                    <label for="nr.employed">Number of employees...</label>
+                </div>
+    
+                <!-- pdays -->
+                <div class="input-field col s6">
+                    <input class='validate' id='pdays' name="pdays" type="number">
+                    <label for="pdays">Days after last contact...</label>
+                </div>
+            </div>    
+            
+            <!-- row 2 -->
+            <div class="row">
+                <!-- cons.conf.idx -->
+                <div class="input-field col s6">
+                    <input class='validate' id='cons.conf.idx' name="cons.conf.idx" type="number" step="any">
+                    <label for="cons.conf.idx">Consumer confidence index...</label>
+                </div>
+    
+                <!-- euribor3m -->
+                <div class="input-field col s6">
+                    <input class='validate' id='euribor3m' name="euribor3m" type="number" step="any">
+                    <label for="euribor3m">Euribor 3 month...</label>
+                </div>
+            </div>    
+
+            <!-- row 3 -->
+            <div class="row">
+                <!-- cons.price.idx -->
+                <div class="input-field col s6">
+                    <input class='validate' id='cons.price.idx' name="cons.price.idx" type="number" step="any">
+                    <label for="cons.price.idx">Consumer price index...</label>
+                </div>
+    
+                <!-- emp.var.rate -->
+                <div class="input-field col s6">
+                    <input class='validate' id='emp.var.rate' name="emp.var.rate" type="number" step="any">
+                    <label for="emp.var.rate">Employment variation rate...</label>
+                </div>
+            </div>    
+
+            <!-- row 4 -->
+            <div class="row">
+                <!-- previous -->
+                <div class="input-field col s6">
+                    <input class='validate' id='previous' name="previous" type="number">
+                    <label for="previous">Contacts before current campaign...</label>
+                </div>
+    
+                <!-- age -->
+                <div class="input-field col s6">
+                    <input class='validate' id='age' name="age" type="number">
+                    <label for="age">Age...</label>
+                </div>
+            </div>    
+
+            <!-- row 5 -->
+            <div class="row">
+                <!-- campaign -->
+                <div class="input-field col s6">
+                    <input class='validate' id='campaign' name="campaign" type="number">
+                    <label for="campaign">Contacts during current campaign...</label>
+                </div>
+
+                <!-- education -->
+                <div class="input-field col s6">
+                    <select name='education' class="browser-default">
+                      <option value="" disabled selected>Level of Education</option>
+                      <option value="basic.4y">Basic 4y</option>
+                      <option value="basic.6y">Basic 6y</option>
+                      <option value="basic.9y">Basic 9y</option>
+                      <option value="high.school">High School</option>
+                      <option value="professional.course">Professional Course</option>
+                      <option value="university.degree">University Degree</option>
+                      <option value="illiterate">illiterate</option>
+                      <option value="unknown">Unknown / Other</option>
+                    </select>
+                </div>
+            </div>    
+    
+                
+            <!-- row 3 -->
+            <div class="mb-1">
+                <button class='btn waves-effect waves-light' type="submit">
+                    PREDICT
+                    &nbsp;&nbsp;
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+    
+        </form>
+
+          
+        </div>
+        <div class="overlay"></div>
+      </header>
+
+      
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="static/vendor/jquery/jquery.min.js"></script>
+  <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="static/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="static/js/stylish-portfolio.min.js"></script>
+
+</body>
+
+</html>
